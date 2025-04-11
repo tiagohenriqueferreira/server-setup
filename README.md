@@ -21,7 +21,6 @@ The script automatically installs and configures:
 - Apache2
 - PHP + Essential modules
 - Composer
-- PostgreSQL
 - MariaDB
 - FFmpeg
 - Node.js
@@ -64,7 +63,6 @@ After installation, you can use the following aliases added to your `.bashrc`:
 - `upgrade` - Install packages listed as upgradable using Nala
 - `rap` - Restart Apache2 service (`sudo service apache2 restart`)
 - `rmdb` - Restart MariaDB service (`sudo service mariadb restart`)
-- `rpg` - Restart PostgreSQL service (`sudo service postgresql restart`)
 - `ss1` - Compiles `scss/style.scss` to `css/style.css` using SASS in watch mode
 - `ss2` - Compiles `scss/ck5style.scss` to `css/ck5style.css` using SASS in watch mode
 - `logs` - Tails the Apache2 error log in real time (`/var/log/apache2/error.log`)
@@ -121,7 +119,6 @@ This project is under the MIT License. See the `LICENSE` file for more informati
 ![PHP Version](https://img.shields.io/badge/PHP-Latest-purple.svg)
 ![Composer](https://img.shields.io/badge/Composer-Latest-yellow.svg)
 ![MariaDB](https://img.shields.io/badge/MariaDB-Latest-blue.svg)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Latest-blue.svg)
 ![Node.js](https://img.shields.io/badge/Node.js-Latest-green.svg)
 ![Npm](https://img.shields.io/badge/Npm-Latest-green.svg)
 ![SASS](https://img.shields.io/badge/SASS-Latest-pink.svg)
