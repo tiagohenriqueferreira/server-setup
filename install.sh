@@ -45,9 +45,6 @@ PACKAGES=(
   apache2
   software-properties-common
   libapache2-mod-php
-  php-pgsql
-  postgresql
-  postgresql-contrib
   php-mysql
   mariadb-server
   php
@@ -131,7 +128,7 @@ check_service() {
   fi
 }
 
-SERVICES=(apache2 mariadb postgresql)
+SERVICES=(apache2 mariadb)
 FAILED=0
 
 for SERVICE in "${SERVICES[@]}"; do
@@ -225,9 +222,6 @@ echo -e "\n${GREEN}Configuring Zsh...${NC}"
   echo "  mariadb_ver=\$(mariadb --version 2>/dev/null | awk '{print \$5}' | sed 's/,//')"
   echo "  [ -z \"\$mariadb_ver\" ] && mariadb_ver=\"Not found\""
   echo ""
-  echo "  postgresql_ver=\$(psql --version 2>/dev/null | awk '{print \$3}')"
-  echo "  [ -z \"\$postgresql_ver\" ] && postgresql_ver=\"Not found\""
-  echo ""
   echo "  sass_ver=\$(sass --version 2>/dev/null | head -n1 | awk '{print \$1}')"
   echo "  [ -z \"\$sass_ver\" ] && sass_ver=\"Not found\""
   echo ""
@@ -241,7 +235,6 @@ echo -e "\n${GREEN}Configuring Zsh...${NC}"
   echo "  printf \"%-12s | %-10s\\n\" \"Apache\" \"\$apache_ver\""
   echo "  printf \"%-12s | %-10s\\n\" \"PHP\" \"\$php_ver\""
   echo "  printf \"%-12s | %-10s\\n\" \"MariaDB\" \"\$mariadb_ver\""
-  echo "  printf \"%-12s | %-10s\\n\" \"PostgreSQL\" \"\$postgresql_ver\""
   echo "  printf \"%-12s | %-10s\\n\" \"SASS\" \"\$sass_ver\""
   echo "  printf \"%-12s | %-10s\\n\" \"Git\" \"\$git_ver\""
   echo "  printf \"%s\\n\\n\" \"\$separator\""
@@ -254,7 +247,6 @@ echo -e "\n${GREEN}Configuring Zsh...${NC}"
   echo "alias upgrade=\"sudo nala install \$(nala list --upgradable | awk '/^[^├└]/ && NF {print \$1}')\""
   echo "alias rap=\"sudo service apache2 restart\""
   echo "alias rmdb=\"sudo service mariadb restart\""
-  echo "alias rpg=\"sudo service postgresql restart\""
   echo "alias ss1=\"sass scss/style.scss css/style.css -w\""
   echo "alias ss2=\"sass scss/ck5style.scss css/ck5style.css -w\""
   echo "alias logs=\"tail -f /var/log/apache2/error.log\""
