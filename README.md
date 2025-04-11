@@ -8,8 +8,8 @@ To install, clone the repository and run the configuration script:
 
 ```bash
 cd ~
-git clone https://github.com/tiagohenriqueferreira/drupal-setup.git
-cd drupal-setup
+git clone https://github.com/tiagohenriqueferreira/server-setup.git
+cd server-setup
 sudo chmod +x install.sh
 ./install.sh
 ```
